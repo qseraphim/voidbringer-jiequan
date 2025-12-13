@@ -57,9 +57,13 @@ public class TormentedJiequan : BaseUnityPlugin {
             yield return null;
         }
 
+        if (monster.CurrentState == MonsterBase.States.BossAngry || monster.CurrentState == MonsterBase.States.Trolling ||
+            monster.CurrentState == MonsterBase.States.LastHit || monster.CurrentState == MonsterBase.States.Dead) yield break;  //bug fix so phase transitions don't happen instantly (v1.0.1)
+        
         int random = Random.Range(1, 11); //10 is 9 here so I put 11 to be 10
         if (random <= 3) {
-            monster.ChangeState(monster.GetState(newState)); //this means 30% chance to cancel state and go into new state
+            monster.ChangeState(
+                monster.GetState(newState)); //this means 30% chance to cancel state and go into new state
         }
     }
 
@@ -425,12 +429,20 @@ public class TormentedJiequan : BaseUnityPlugin {
         fullControlStagger.SetActive(false);
         var shieldBreakStagger = GameObject.Find(PATH_LIST.JIEQUAN_STATE.SHIELD_BREAK_STAGGER);
         shieldBreakStagger.SetActive(false);
-        var unboundCounterStagger = GameObject.Find(PATH_LIST.JIEQUAN_STATE.UC_STAGGER);
-        unboundCounterStagger.SetActive(false);
+        //var unboundCounterStagger = GameObject.Find(PATH_LIST.JIEQUAN_STATE.UC_STAGGER);
+        //unboundCounterStagger.SetActive(false);           //removed as balance change (v1.0.1)
     }
     
     private static void AttackSpeedChanger() {
-                var doubleSlashSpeed = (GameObject.Find(PATH_LIST.JIEQUAN_ATTACK.DOUBLE_SLASH))
+
+        var unboundCounterStaggerSpeed = GameObject.Find(PATH_LIST.JIEQUAN_STATE.UC_STAGGER)
+            .GetComponent<BossGeneralState>();
+        if (unboundCounterStaggerSpeed != null) {
+            unboundCounterStaggerSpeed.AnimationSpeed = PATH_LIST.SPEED_MULTIPLIER.STUN_STATE_SPEED;
+            unboundCounterStaggerSpeed.OverideAnimationSpeed = true;
+        }
+
+        var doubleSlashSpeed = (GameObject.Find(PATH_LIST.JIEQUAN_ATTACK.DOUBLE_SLASH))
                     .GetComponent<BossGeneralState>();
                 doubleSlashSpeed.AnimationSpeed = PATH_LIST.SPEED_MULTIPLIER.DOUBLE_SLASH_SPEED;
                 doubleSlashSpeed.OverideAnimationSpeed = true;

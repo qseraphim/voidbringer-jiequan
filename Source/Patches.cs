@@ -20,7 +20,9 @@ namespace TormentedJiequan;
         [HarmonyPatch(typeof(BossGeneralState), nameof(BossGeneralState.OnAnimationMove))]
         private static void ChasingAttackEnhancer(ref BossGeneralState __instance, ref Vector3 delta) {
             if (SceneManager.GetActiveScene().name == PATH_LIST.BOSS_ROOM.SCENE_NAME) {
-                delta.x *= 1.2f;
+                if (__instance.GetStateType() == MonsterBase.States.AttackParrying1) //fix stagger knockback being excessive (v1.0.1)
+                    delta.x *= 1.05f;                                           //not sure if this even works, it sometimes seems to
+                else delta.x *= 1.2f;
             }
         }
 

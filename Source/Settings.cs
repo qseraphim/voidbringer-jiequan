@@ -43,13 +43,14 @@ public static class PATH_LIST
         public const float DAGGERS_SPEED = 1 + 0.7f;
         public const float DIAGONAL_SPEED = 1 + 0.8f;
         public const float PLUNGE_SPEED = 1 + 0.7f;
-        public const float CRIMSON_SMASH_SPEED = 1 + 0.8f;
+        public const float CRIMSON_SMASH_SPEED = 1 + 0.7f;
         public const float STAB_SPEED = 1 + 0.7f;
         public const float GRENADES_SPEED = 1 + 0.7f;
         public const float SHIELD_SPEED = 1 + 1f;
         public const float TELEPORT_SPEED = 1 + 2f;
         public const float HORIZONTAL_SPEED = 1 + 0.8f;
         public const float CRIMSON_THRUST_SPEED = 1 + 0.7f;
+        public const float STUN_STATE_SPEED = 1 + 1f;
         public const float PHASE_2_TRANSITION_SPEED = 1 + 3f;
         public const float PHASE_3_TRANSITION_SPEED = 1 + 7f;
     }
