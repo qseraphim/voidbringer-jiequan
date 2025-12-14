@@ -48,7 +48,7 @@ namespace TormentedJiequan;
             __instance.postureSystem.DieHandleingStates = new() {
                 MonsterBase.States.BossAngry,
                 MonsterBase.States.BossAngry,
-                MonsterBase.States.Trolling,
+                //MonsterBase.States.Trolling,      removed for p3 1hp survive bug fix (v1.0.2)
                 MonsterBase.States.LastHit,
                 MonsterBase.States.Dead,
             };

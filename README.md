@@ -6,19 +6,20 @@ With a heavy hint of Promised Eigong design philosophy but taken a few notches f
 
 ## Hall Of Fame
 ### First 10 Public Clears
-1. Classyy - https://www.youtube.com/watch?v=zaPy7_CmsWQ - Prong Fire, v1.0.0
+1. Classyy - https://www.youtube.com/watch?v=zaPy7_CmsWQ - v1.0.0
 2. imsoblind - https://www.youtube.com/watch?v=UEOb7xHX_Ws - v1.0.0
-3. Valyria - https://youtu.be/_XCvW0iomS8?si=Ch1CQlq6LO2XCEOZ - Prong Fire, v1.0.0
+3. Valyria - https://youtu.be/_XCvW0iomS8?si=Ch1CQlq6LO2XCEOZ - v1.0.0
 - More to come...
 
 ### First 10 Public NOHIT Clears
 1. Classyy - https://www.youtube.com/watch?v=KwXb9Yw8KNQ - v1.0.0 (GOAT)
-- More to come...
+2. imsoblind - https://youtu.be/cbggEf9e6kI - v1.0.0
+3. Valyria - https://www.youtube.com/watch?v=Okv0UFZz1RM - v1.0.0
 
 ### First 10 Public Lights Out (TL or NTL) Clears
-- Yet to be cleared...
+1. Valyria - https://youtu.be/dYD9rGENEw8?si=3nnllajg5FwFWWzy - No Tracking Light, v1.0.0 (CONGRATS! :D)
 
-## Current changes and new additions (v1.0.0)
+## Current changes and new additions (v1.0.2)
 
 ### Universal changes
 - Damage received from most of Jiequan's attacks is increased by 50%
@@ -72,3 +73,7 @@ With a heavy hint of Promised Eigong design philosophy but taken a few notches f
 - Horizontal Thrust can now be followed up with: Shield, Daggers, Crimson Smash and itself
 - Grenades is always followed up with Daggers
 - Daggers can now be followed up with: Daggers and Double Slash
+
+### v1.0.2 CHANGELOG:
+- Fixed a bug where Voidbringer Jiequan would sometimes survive on 1hp in phase 3
+- Updated Hall of Fame (Latest: Dec. 14th, 2025)
